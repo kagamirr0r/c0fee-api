@@ -3,12 +3,6 @@
 コーヒーのロースター / 豆 / 淹れ方 を記録、共有できるアプリです。<br/>
 どんなコーヒーがあるのか探してみましょう！<br/>
 
-### https://c0fee.com （現在停止中）
-
-<a href="https://c0fee.com/">
-<img width="1436" alt="スクリーンショット 2020-08-08 22 20 48" src="https://user-images.githubusercontent.com/45422771/89711569-fd51c280-d9c5-11ea-86e7-e276df3c4338.png">
-</a>
-
 ---
 
 ### 機能一覧
