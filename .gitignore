@@ -70,15 +70,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-# Local .terraform directories
-terraform/.terraform/*
-terraform/operation/.terraform/*
-
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
-
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
