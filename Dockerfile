@@ -14,6 +14,7 @@ RUN apt-get install -y vim
 
 COPY Gemfile $APP_ROOT/Gemfile
 COPY Gemfile.lock $APP_ROOT/Gemfile.lock
+RUN bundle update
 RUN bundle install
 
 COPY . $APP_ROOT
