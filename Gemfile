@@ -10,7 +10,7 @@ gem 'pg', '~> 1.3', '>= 1.3.5'
 # Use Puma as the app server
 gem 'puma', '~> 5.6', '>= 5.6.4'
 # Use SCSS for stylesheets
-# gem 'sassc-rails'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -48,15 +48,15 @@ gem 'fog-aws'
 
 gem 'ridgepole'
 
-# gem 'jquery-rails'
+gem 'jquery-rails'
 
 gem 'rails-i18n', '~> 6.0'
 # gem 'devise-i18n'
 # gem 'devise-i18n-views'
 gem 'i18n-js'
 
-# gem 'materialize-sass', '~> 1.0.0'
-# gem 'material_icons'
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
 
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.1'
 
@@ -68,8 +68,8 @@ gem 'enum_help'
 
 gem 'globalize', '~> 5.3.0'
 
-# gem 'chart-js-rails'
-# gem 'font-awesome-sass'
+gem 'chart-js-rails'
+gem 'font-awesome-sass'
 
 gem 'faker'
 

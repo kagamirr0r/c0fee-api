@@ -21,7 +21,7 @@
 //= require_tree .
 
 $(document).ready(function () {
-	$('.fixed-action-btn').floatingActionButton();
+	$(".fixed-action-btn").floatingActionButton();
 });
 
 $(document).on("click", "#avatar_select_file_button", function () {
@@ -29,11 +29,7 @@ $(document).on("click", "#avatar_select_file_button", function () {
 });
 
 $(document).on("change", "#user_avatar", function () {
-	$("#avatar_filename").val(
-		$(this)
-		.val()
-		.replace(/^.*\\/, "")
-	);
+	$("#avatar_filename").val($(this).val().replace(/^.*\\/, ""));
 });
 
 $(document).on("click", "#bean_select_file_button", function () {
@@ -41,11 +37,7 @@ $(document).on("click", "#bean_select_file_button", function () {
 });
 
 $(document).on("change", "#bean_bean_image", function () {
-	$("#bean_filename").val(
-		$(this)
-		.val()
-		.replace(/^.*\\/, "")
-	);
+	$("#bean_filename").val($(this).val().replace(/^.*\\/, ""));
 });
 
 $(document).on("click", "#recipe_select_file_button", function () {
@@ -53,11 +45,7 @@ $(document).on("click", "#recipe_select_file_button", function () {
 });
 
 $(document).on("change", "#recipe_recipe_image", function () {
-	$("#recipe_filename").val(
-		$(this)
-		.val()
-		.replace(/^.*\\/, "")
-	);
+	$("#recipe_filename").val($(this).val().replace(/^.*\\/, ""));
 });
 
 $(document).on("click", "#shop_select_file_button", function () {
@@ -65,17 +53,13 @@ $(document).on("click", "#shop_select_file_button", function () {
 });
 
 $(document).on("change", "#shop_shop_image", function () {
-	$("#shop_filename").val(
-		$(this)
-		.val()
-		.replace(/^.*\\/, "")
-	);
+	$("#shop_filename").val($(this).val().replace(/^.*\\/, ""));
 });
 
 $(document).ready(function () {
 	$(".dropdown-trigger").dropdown({
 		coverTrigger: false,
-		constrainWidth: false
+		constrainWidth: false,
 	});
 });
 
@@ -88,83 +72,83 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-	$('.tooltipped').tooltip();
+	$(".tooltipped").tooltip();
 });
 
 $(document).ready(function () {
-	$('.modal').modal();
+	$(".modal").modal();
 });
 
 $(document).ready(function () {
-	$('.datepicker').datepicker();
+	$(".datepicker").datepicker();
 });
 
 $(document).ready(function () {
-	$('input.autocomplete').autocomplete({
+	$("input.autocomplete").autocomplete({
 		data: {
 			"エスピリット・サント": null,
-			"ミナスジェライス": null,
-			"リントン": null,
-			"トミオフクダ": null,
-			"エスペランサ": null,
-			"アマティトラン": null,
-			"フロレンシア": null,
-			"ブルンジ": null,
-			"トマジーニ": null,
-			"サンパウロ": null,
-			"トマジーニ": null,
-			"バイーア": null,
-			"ウイラ": null,
-			"アチェ": null,
-			"ティムティム": null,
-			"北スマトラ": null,
-			"アテン": null,
-			"スラウェシ": null,
-			"イルガチェッフェ": null,
-			"オロミア": null,
-			"シダモ": null,
-			"パライネマ": null,
-			"サンタバルバラ": null,
+			ミナスジェライス: null,
+			リントン: null,
+			トミオフクダ: null,
+			エスペランサ: null,
+			アマティトラン: null,
+			フロレンシア: null,
+			ブルンジ: null,
+			トマジーニ: null,
+			サンパウロ: null,
+			トマジーニ: null,
+			バイーア: null,
+			ウイラ: null,
+			アチェ: null,
+			ティムティム: null,
+			北スマトラ: null,
+			アテン: null,
+			スラウェシ: null,
+			イルガチェッフェ: null,
+			オロミア: null,
+			シダモ: null,
+			パライネマ: null,
+			サンタバルバラ: null,
 			"エル・プラン": null,
-			"ラパス": null,
-			"インティブカ": null,
-			"アンティグア": null,
-			"ウエウエテナンゴ": null,
-			"アンティグア": null,
-			"アマティトラン": null,
-			"プーノ": null,
-			"クスコ": null,
-			"チアパス": null,
-			"H1": null,
-			"セントラルバレー": null,
-			"ゲイシャ": null,
-			"ウェストバレー": null,
-			"タラス": null,
-			"セントロアメリカーノ": null,
-			"チリキ": null,
-			"アルーシャ": null,
-			"ケント": null,
-			"ニエリ": null,
-			"ルイル11": null,
-			"SL28": null,
-			"ハラバコア": null,
-			"カヤンザ": null,
-			"ンゴジ": null,
-			"ヒノテガ": null,
+			ラパス: null,
+			インティブカ: null,
+			アンティグア: null,
+			ウエウエテナンゴ: null,
+			アンティグア: null,
+			アマティトラン: null,
+			プーノ: null,
+			クスコ: null,
+			チアパス: null,
+			H1: null,
+			セントラルバレー: null,
+			ゲイシャ: null,
+			ウェストバレー: null,
+			タラス: null,
+			セントロアメリカーノ: null,
+			チリキ: null,
+			アルーシャ: null,
+			ケント: null,
+			ニエリ: null,
+			ルイル11: null,
+			SL28: null,
+			ハラバコア: null,
+			カヤンザ: null,
+			ンゴジ: null,
+			ヒノテガ: null,
 			"ヌエバ・セゴビア": null,
-			"マタガルパ": null,
-			"ケサルテペケ": null,
+			マタガルパ: null,
+			ケサルテペケ: null,
 			"エル・ボケロン": null,
-			"ソンソナテ": null,
-			"サンタリタ": null,
-			"ロマ・ラ・グロリア": null
+			ソンソナテ: null,
+			サンタリタ: null,
+			"ロマ・ラ・グロリア": null,
 		},
 	});
 });
 $(document).ready(function () {
-	$('.collapsible').collapsible();
+	$(".collapsible").collapsible();
 });
 
 $(document).ready(function () {
-	$('.sidenav').sidenav();
+	$(".sidenav").sidenav();
 });
