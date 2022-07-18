@@ -4,15 +4,19 @@ class RecipesController < ApplicationController
   def index
     @recipe_search_params = recipe_search_params
 
-    @recipes = if recipe_search_params.present?
-                 Recipe.joins(bean: :translations).where(bean_translations: { locale: I18n.locale })
-                       .search_recipe(@recipe_search_params).page(params[:page])
-               else
-                 Recipe.joins(bean: :translations).where(bean_translations: { locale: I18n.locale }).page(params[:page])
-               end
+    @recipes = 
+      if recipe_search_params.present?
+        Recipe.joins(bean: :translations).where(bean_translations: { locale: I18n.locale })
+              .search_recipe(@recipe_search_params).page(params[:page])
+      else
+        Recipe.joins(bean: :translations).where(bean_translations: { locale: I18n.locale }).page(params[:page])
+      end
+    render json: @recipes
   end
 
-  def show; end
+  def show
+    render json: @recipe
+  end
 
   def new
     @bean = Bean.find(params[:id])
@@ -28,21 +32,26 @@ class RecipesController < ApplicationController
     @bean = Bean.find(params[:recipe][:bean_id])
     @recipe = @bean.recipes.build(recipe_params)
     @recipe.save!
-    redirect_to "/my_pages/#{current_user.id}#made_recipes", notice: t('recipes.flash.made_recipe')
+    render json: @recipe
+    # redirect_to "/my_pages/#{current_user.id}#made_recipes", notice: t('recipes.flash.made_recipe')
   rescue StandardError
-    render :new
+    render json: @recipe
+    # render :new
   end
 
   def update
     @recipe.update!(recipe_params)
-    redirect_to "/my_pages/#{current_user.id}#made_recipes", notice: t('recipes.flash.edited_recipe')
+    render json: @recipe
+    # redirect_to "/my_pages/#{current_user.id}#made_recipes", notice: t('recipes.flash.edited_recipe')
   rescue StandardError
-    render action: 'edit'
+    render json: @recipe
+    # render action: 'edit'
   end
 
   def destroy
     @recipe.destroy
-    redirect_to "/my_pages/#{current_user.id}#made_recipes", notice: t('recipes.flash.deleted_recipe')
+    render json: @recipe
+    # redirect_to "/my_pages/#{current_user.id}#made_recipes", notice: t('recipes.flash.deleted_recipe')
   end
 
   private
@@ -52,8 +61,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:user_id, :bean_id, :hot_ice, :grind, :temperature, :amount, :extraction, :extracted_amount, :recipe_image,
-                                   taste_attributes: [:id, :recipe_id, :t_sour, :t_sweet, :t_bitter, :t_aroma, :t_fullbody, :t_comment])
+    params.require(:recipe).permit(:user_id, :bean_id, :hot_ice, :grind, :temperature, :amount, :extraction, :extracted_amount, :recipe_image, taste_attributes: [:id, :recipe_id, :t_sour, :t_sweet, :t_bitter, :t_aroma, :t_fullbody, :t_comment])
   end
 
   def recipe_search_params

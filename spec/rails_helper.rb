@@ -9,7 +9,7 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-require 'devise'
+# require 'devise'
 require File.expand_path('spec/support/controller_macros.rb')
 require 'capybara/rspec'
 require 'selenium-webdriver'
@@ -68,7 +68,7 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryBot::Syntax::Methods
-  config.include Devise::TestHelpers, type: :controller
+  # config.include Devise::TestHelpers, type: :controller
   config.include ControllerMacros, type: :controller
 
   config.before(:suite) do

@@ -13,7 +13,9 @@ class BeansController < ApplicationController
     render json: @beans
   end
 
-  def show; end
+  def show
+    render json: @bean
+  end
 
   def new
     @shop = Shop.find(params[:id])
@@ -37,12 +39,11 @@ class BeansController < ApplicationController
   end
 
   def update
-    @bean.update!(bean_params)
-    render json: @bean
-    # redirect_to my_page_path(current_user), notice: t('beans.flash.edited_bean')
-  rescue StandardError
-    @shop = Shop.find(@bean.shop.id)
-    render json: @bean
+    if @bean.update(shop_params)
+      render json: @bean
+    else
+      render json: @bean
+    end
   end
 
   def destroy
