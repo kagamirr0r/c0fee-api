@@ -85,4 +85,4 @@ production:
   # password: <%= ENV['RDS_PASSWORD'] %>
   # port: 5432
   database: app_production
-  password: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
