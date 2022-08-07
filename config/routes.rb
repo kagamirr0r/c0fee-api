@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     #   post 'users/guest_sign_in', to: 'sessions#new_guest'
     # end
 
-    root 'top_pages#index'
+    # root 'top_pages#index'
 
     resources :inquiries, only: [:new, :create]
 

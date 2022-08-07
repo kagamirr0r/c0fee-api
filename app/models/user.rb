@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # devise :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :trackable, :validatable, :confirmable,
   #        :lockable, :timeoutable, :omniauthable, omniauth_providers: [:google_oauth2]
-
+  has_secure_password
   validates :email, presence: true, format: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   # def self.from_omniauth(auth)

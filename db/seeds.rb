@@ -9,22 +9,21 @@
 
 #I18n.locale = :ja
 [
-	['ゲストマン', 'guestja@guest.com', 'guestmanja', Time.now]
-].each do |name, mail, pass, confirmed_at|
+	['ゲストマン', 'guestja@guest.com', 'guestmanja']
+].each do |name, mail, pass|
 	#I18n.locale = :ja
   User.create!(
-    username: name, email: mail, password: pass, avatar: open("db/fixtures/avatar1.jpg"), confirmed_at: confirmed_at
+    name: name, email: mail, password: pass, avatar: open("db/fixtures/avatar1.jpg")
   )
 end
 
 2.upto(12) do |n|
 	#I18n.locale = :ja
-	username = Faker::Internet.username
+	name = Faker::Internet.username
 	email = Faker::Internet.free_email
 	password = Faker::Internet.password
-	confirmed_at = Time.now
 	User.create!(
-		username: username, email: email, password: password, avatar: open("db/fixtures/avatar#{n}.jpg"), confirmed_at: confirmed_at
+		name: name, email: email, password: password, avatar: open("db/fixtures/avatar#{n}.jpg")
 	)
 end
 
@@ -133,28 +132,27 @@ end
 
 # I18n.locale = :en
 [
-	['GuestMan', 'guesten@guest.com', 'guestmanen', Time.now]
-].each do |name, mail, pass, confirmed_at|
+	['GuestMan', 'guesten@guest.com', 'guestmanen']
+].each do |name, mail, pass|
 	#I18n.locale = :en
 	User.create!(
-	  username: name, email: mail, password: pass, avatar: open("db/fixtures/avatar12.jpg"), confirmed_at: confirmed_at
+		name: name, email: mail, password: pass, avatar: open("db/fixtures/avatar12.jpg")
 	)
 end
 
 14.upto(23) do |n|
 	#I18n.locale = :en
-	username = Faker::Internet.username
+	name = Faker::Internet.username
 	email = Faker::Internet.free_email
 	password = Faker::Internet.password
-	confirmed_at = Time.now
 	User.create!(
-		username: username, email: email, password: password, avatar: open("db/fixtures/avatar#{n}.jpg"), confirmed_at: confirmed_at
+		name: name, email: email, password: password, avatar: open("db/fixtures/avatar#{n}.jpg")
 	)
 end
 
 [
 	['Starbucks Coffee Pike Place', '1912 Pike Place Seattle, WA 98101', 'https://www.starbucks.com/store-locator/store/11676/pike-place-1912-pike-place-seattle-wa-981011013-us',File.open('db/fixtures/shop12.jpg'),47.609966,-122.342323],
- 	['The Coffee Bean & Tea leaf Pico & Smithwood', '9541 W. Pico Blvd. Los Angeles CA 90035 USA', 'https://www.coffeebean.com/store/usa/los-angeles/pico-and-smithwood',File.open('db/fixtures/shop13.jpg'),34.055595, -118.396758],
+	['The Coffee Bean & Tea leaf Pico & Smithwood', '9541 W. Pico Blvd. Los Angeles CA 90035 USA', 'https://www.coffeebean.com/store/usa/los-angeles/pico-and-smithwood',File.open('db/fixtures/shop13.jpg'),34.055595, -118.396758],
 	['Honolulu Coffee Experience Center', '1800 Kalakaua Ave Honolulu, HI 96815', 'https://www.honolulucoffee.com/pages/honolulu-coffee-experience-center',File.open('db/fixtures/shop14.jpg'),21.290679, -157.835092],
 	['Stumptown Coffee Roasters Divisions', '4525 SE Division Street Portland, OR 97206', 'https://www.stumptowncoffee.com/locations/portland/division',File.open('db/fixtures/shop15.jpg'),45.505504, -122.615562],
 	['Bird Rock La Jolla','5627 La Jolla Blvd, La Jolla, CA 92037','https://www.birdrockcoffee.com/',File.open('db/fixtures/shop16.jpg'),32.814479, -117.269759],
