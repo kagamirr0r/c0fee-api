@@ -1,4 +1,4 @@
-FROM ruby:2.7.6
+FROM ruby:3.0.4
 
 ENV LANG C.UTF-8
 
@@ -14,7 +14,7 @@ RUN apt-get install -y vim
 
 COPY Gemfile $APP_ROOT/Gemfile
 COPY Gemfile.lock $APP_ROOT/Gemfile.lock
-RUN bundle update
+# RUN bundle update
 RUN bundle install
 
 COPY . $APP_ROOT
