@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require i18n/translations
 //= require activestorage
 //= require materialize
 //= require materialize-sprockets
