@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: impressions
+#
+#  id        :bigint           not null, primary key
+#  bean_id   :integer          not null
+#  i_sour    :integer
+#  i_sweet   :integer
+#  i_bitter  :integer
+#  i_comment :text
+#
 FactoryBot.define do
   factory :impression, class: Impression do
     # bean_id { Faker::Number.number(digits: 1) }

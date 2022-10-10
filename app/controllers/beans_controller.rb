@@ -52,6 +52,22 @@ class BeansController < ApplicationController
     # redirect_to my_page_path(current_user), notice: t('beans.flash.deleted_bean')
   end
 
+  def countries
+    render json: Bean.countries.keys
+  end
+
+  def varieties
+    render json: Bean.varieties.keys
+  end
+
+  def processes
+    render json: Bean.processes.keys
+  end
+
+  def roasts
+    render json: Bean.roasts.keys
+  end
+
   private
 
   def set_bean

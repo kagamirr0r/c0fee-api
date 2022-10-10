@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: tastes
+#
+#  id         :bigint           not null, primary key
+#  recipe_id  :integer
+#  t_sour     :integer          not null
+#  t_sweet    :integer          not null
+#  t_bitter   :integer          not null
+#  t_aroma    :integer          not null
+#  t_fullbody :integer          not null
+#  t_comment  :text
+#
 FactoryBot.define do
   factory :taste, class: Taste do
     recipe_id { Faker::Number.number(digits: 1) }

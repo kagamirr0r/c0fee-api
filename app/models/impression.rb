@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: impressions
+#
+#  id        :bigint           not null, primary key
+#  bean_id   :integer          not null
+#  i_sour    :integer
+#  i_sweet   :integer
+#  i_bitter  :integer
+#  i_comment :text
+#
 class Impression < ApplicationRecord
   validates :i_comment, length: { maximum: 100 }
 

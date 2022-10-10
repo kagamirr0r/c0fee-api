@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: inquiries
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  message    :string
+#  email      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class Inquiry < ApplicationRecord
   validates :name, presence: { message: I18n.t('errors.messages.Please_enter_your_name') }
   validates :email, presence: { message: I18n.t('errors.messages.Please_input_your_email_address') },

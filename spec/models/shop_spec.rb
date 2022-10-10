@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: shops
+#
+#  id         :bigint           not null, primary key
+#  url        :string
+#  shop_image :string
+#  latitude   :float
+#  longitude  :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  name       :string
+#  address    :string
+#
 require 'rails_helper'
 
 RSpec.describe Shop, type: :model do

@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: tastes
+#
+#  id         :bigint           not null, primary key
+#  recipe_id  :integer
+#  t_sour     :integer          not null
+#  t_sweet    :integer          not null
+#  t_bitter   :integer          not null
+#  t_aroma    :integer          not null
+#  t_fullbody :integer          not null
+#  t_comment  :text
+#
 class Taste < ApplicationRecord
   validates :t_sour, :t_sweet, :t_bitter, :t_aroma, :t_fullbody, presence: true
   validates :t_comment, length: { maximum: 100 }

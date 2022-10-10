@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: beans
+#
+#  id         :bigint           not null, primary key
+#  user_id    :integer
+#  shop_id    :integer
+#  country    :integer
+#  variety    :integer
+#  process    :integer
+#  roast      :integer
+#  price      :integer
+#  bean_image :string
+#  roast_date :date
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  area       :string
+#  farm       :string
+#
 FactoryBot.define do
   factory :bean, class: Bean do
     country { Faker::Number.within(range: 0..30) }
