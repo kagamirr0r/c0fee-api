@@ -71,6 +71,8 @@ Rails.application.routes.draw do
 
     # root 'top_pages#index'
 
+    post 'sign_up', to: 'auth#sign_up'
+
     resources :inquiries, only: [:new, :create]
 
     resources :my_pages, only: [:show]

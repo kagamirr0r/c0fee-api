@@ -17,7 +17,7 @@ jobs:
       - run:
           name: set environment variable
           command: |
-            echo RAILS_ENV=${RAILS_ENV} > ~/project/.env.test
+            echo RAILS_ENV=${RAILS_ENV} >> ~/project/.env.test
             echo RAILS_MASTER_KEY=${RAILS_MASTER_KEY} >> ~/project/.env.test
             echo POSTGRES_USER=${POSTGRES_USER} >> ~/project/.env.test
             echo POSTGRES_PASSWORD=${POSTGRES_PASSWORD} >> ~/project/.env.test
